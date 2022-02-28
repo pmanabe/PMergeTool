@@ -6,6 +6,7 @@ from openpyxl import load_workbook
 import urllib.parse
 
 templateHeaders = {
+    'Full Name': [''],
     'Description': [''],
     'User License': [''],
     'Apex Class Access': ['Class'],
@@ -24,6 +25,7 @@ templateHeaders = {
 }
 
 templateStartRowColumn = {
+    'Full Name': [1,1],
     'Description': [1,1],
     'User License': [1,1],
     'Apex Class Access': [2,2],
@@ -277,9 +279,9 @@ permissionAliasFile = '.permissionset.md.xlsx'
 
 # Profile template and excel generation
 # 150 files: 12m 23s
-#mdToExcelwithTemplateGeneration(profileMDFileNameRegex,profileTemplateFileName,profileAliasFile)
+mdToExcelwithTemplateGeneration(profileMDFileNameRegex,profileTemplateFileName,profileAliasFile)
 
 # Merge all profile excel files into one
 # 150 files: 25m 56s
-mdToTemplate(profileFileNameRegex, profileTemplateFileName,profileMergeFileName)
+# mdToTemplate(profileFileNameRegex, profileTemplateFileName,profileMergeFileName)
 
